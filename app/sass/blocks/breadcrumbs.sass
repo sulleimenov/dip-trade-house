@@ -1,0 +1,18 @@
+.breadcrumbs-wrapper
+	background-color: $gray
+	margin-bottom: 30px
+.breadcrumbs
+	display: flex
+	align-items: center
+	height: 40px
+	&__item
+		text-decoration: none
+		color: $dark
+		position: relative
+		font-size: 12px
+		&:not(:last-child)
+			padding-right: 25px
+			&::after
+				position: absolute
+				right: 10px
+				content: '>'

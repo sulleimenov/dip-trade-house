@@ -1,0 +1,102 @@
+.header-wrapper
+	background-color: #EFEFEF
+.header
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 70px
+	&__left
+		@include media-breakpoint-down(md)
+			display: none
+	&__right
+		display: flex
+		align-items: center
+		column-gap: 30px
+	// &__logo
+	&__socials
+		display: flex
+	&__socials-item
+		&:not(:last-child)
+			margin-right: 10px
+	&__burger-menu-wrapper
+		display: flex
+		align-items: center
+		justify-content: center
+		width: 40px
+		height: 40px
+		border-radius: 40px
+		background-color: #fff
+		@include media-breakpoint-up(lg)
+			display: none
+	&__burger-menu
+		position: relative
+		height: 15px
+		width: 18px
+		span
+			position: absolute
+			top: 7px
+			display: block
+			width: 18px
+			height: 1px
+			background-color: $dark
+		&::before
+			content: ''
+			position: absolute
+			top: -0
+			width: 18px
+			height: 1px
+			background-color: $dark
+		&::after
+			content: ''
+			position: absolute
+			bottom: 0
+			width: 18px
+			height: 1px
+			background-color: $dark
+
+.menu-wrapper
+
+.menu
+	display: flex
+	justify-content: space-between
+	align-items: center
+	height: 60px
+	transition: all .1s ease
+	@include media-breakpoint-down(lg)
+		position: absolute
+		z-index: 10
+		background-color: #fff
+		flex-direction: column
+		justify-content: flex-start
+		align-items: flex-start
+		height: auto
+		padding: 20px
+		right: 0
+		top: 10px
+		opacity: 0
+		visibility: hidden
+		&.show
+			opacity: 1
+			visibility: visible
+		@include media-breakpoint-down(xs)
+			right: 10px
+	&__link
+		text-transform: uppercase
+		text-decoration: none
+		color: $dark
+		@include media-breakpoint-down(lg)
+			display: block
+			padding: 5px 0
+.menu-box
+	@include media-breakpoint-down(lg)
+		position: relative
+
+.footer
+	background-color: $dark
+	height: 150px
+	display: flex
+	align-items: center
+	justify-content: center
+	color: #fff
+	font-size: 12px
+	margin-top: 60px
